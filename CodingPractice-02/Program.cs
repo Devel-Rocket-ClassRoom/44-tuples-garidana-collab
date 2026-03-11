@@ -5,15 +5,15 @@ using static System.Console;
 // README.md를 읽고 코드를 작성하세요.
 
 // 1
+    var a = Tally();
+    (int, int) Tally()
+    {
+        var sum = (12, 3);
 
-var a = Tally();
-(int,int) Tally()
-{
-    var sum = (12, 3);
 
+        return sum;
+    }
 
-    return sum ;
-}
 
 Console.WriteLine($"합계: {a.Item1}, 개수: {a.Item2}");
 
@@ -82,3 +82,29 @@ WriteLine($"이름: {name}\n나이: {age}");
 WriteLine();
 
 // 7
+(int sum, int count) = Tally();
+
+WriteLine($"Sum: {sum}, Count: {count}");
+
+WriteLine();
+
+// 8
+var alice = ("Alice", 30);
+
+(string name1, int age1) = alice;
+WriteLine($"{name1}, {age1}");
+
+WriteLine();
+
+// 9
+static (string name, int age2, bool IsGood) Sexy() // => ("철수", 23, true);
+{
+    return ("철수", 23, true);
+}
+
+var (_, age2, _) = Sexy();
+WriteLine($"나이: {age2}");
+
+WriteLine();
+
+
